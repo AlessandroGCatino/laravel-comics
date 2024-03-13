@@ -1,23 +1,69 @@
-<h1>Componente Header</h1>
+<?php
+
+$navElements = [[
+        "name" => "characters",
+        "link" => "#"
+    ],
+    [
+        "name" => "comics",
+        "link" => "#"
+    ],
+    [
+        "name" => "movies",
+        "link" => "#"
+    ],
+    [
+        "name" => "tv",
+        "link" => "#"
+    ],
+    [
+        "name" => "games",
+        "link" => "#"
+    ],
+    [
+        "name" => "collectibles",
+        "link" => "#"
+    ],
+    [
+        "name" => "videos",
+        "link" => "#"
+    ],
+    [
+        "name" => "fans",
+        "link" => "#"
+    ],
+    [
+        "name" => "news",
+        "link" => "#"
+    ],
+    [
+        "name" => "shop",
+        "link" => "#"
+    ]
+];
+
+?>
 
 <div id="external">
     <div class="container py-3 d-flex justify-content-between">
         <figure>
-            <img src="../assets/img/dc-logo.png" alt="Header Logo" width="70">
+            <img src={{ Vite::asset("resources/img/dc-logo.png")}} alt="Header Logo">
         </figure>
         <nav class="d-flex align-items-center">
             <ul class="d-flex gap-3 text-uppercase">
-                <li v-for= "(elements, index) in navElements" :key="index">
-                    <a :href="elements.link"> {{ elements.name }} </a>
+                @foreach ($navElements as $elements)
+                <li>
+                    <a href="<?= $elements['link']?>"> {{ $elements["name"] }} </a>
                 </li>
+                @endforeach
             </ul>
         </nav>
     </div>
-
 </div>
-<nav>
-    <ul>
-        <li><a href="{{ route('homePage') }}">Home</a></li>
-        <li><a href="{{ route('aboutPage') }}">About</a></li>
-    </ul>
-</nav>
+
+<style lang="scss" scoped>
+    figure{
+        width: 70px;
+        
+    }
+</style>

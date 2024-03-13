@@ -1,5 +1,6 @@
-@use "./partials/variables" as *;
-@use "./partials/mixins" as *;
+@use "./partials/_variables" as *;
+@use "./partials/_mixins" as *;
+@import "bootstrap/scss/bootstrap";
 
 * {
     box-sizing: border-box;
