@@ -17,6 +17,10 @@ img {
     display: block;
 }
 
+figure{
+    margin: 0;
+}
+
 li {
     list-style-type: none;
 }
@@ -24,32 +28,78 @@ li {
 a {
     text-decoration: none;
     color: black;
-
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 button:hover {
     cursor: pointer;
 }
 
-h1 {
-    color: $font-color;
-    @include main-font-center;
-}
+
 
 header {
-    h1 {
-        color: $font-color-third;
-    }
-
     nav {
         ul {
             display: flex;
             align-items: center;
+            margin: 0;
             padding: 20px;
             gap: 20px;
         }
     }
+}
+
+main{
+    background-image: url("../img/jumbotron.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 400px;
+}
+
+#heroesBack{
+    background-image: url("../img/footer-bg.jpg");
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+#heroesBack .left-column{
+    padding-block: 30px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#heroesBack a{
+    text-decoration: none;
+    color: white;
+}
+#heroesBack .left-column ul{
+    padding: 0;
+    align-items: flex-start;
+}
+
+#heroesBack .left-column ul li a{
+    color: grey;
+}
+
+#heroesBack .left-column ul li a:hover{
+    color: white
+};
+
+#heroesBack .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#heroesBack .right-column{
+    height: 400px;
+    background-image: url("../img/dc-logo-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }

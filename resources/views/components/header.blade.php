@@ -45,7 +45,7 @@ $navElements = [[
 ?>
 
 <div id="external">
-    <div class="container py-3 d-flex justify-content-between">
+    <div class="container py-3 d-flex justify-content-between align-items-center">
         <figure>
             <img src={{ Vite::asset("resources/img/dc-logo.png")}} alt="Header Logo">
         </figure>
@@ -61,9 +61,25 @@ $navElements = [[
     </div>
 </div>
 
-<style lang="scss" scoped>
-    figure{
+<style lang="scss">
+    #external figure{
         width: 70px;
-        
+        height: 70px;
+    }
+
+    #external li{
+    position: relative;
+    }
+
+    #external a:hover{
+        color: #0282f9;
+    }
+    #external li:hover:after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        left: 0;
+        bottom: -40px;
+        border-bottom: 3px solid #0282f9;
     }
 </style>
