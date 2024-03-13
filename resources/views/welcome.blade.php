@@ -252,77 +252,14 @@
         </div>
         <div class="d-flex gap-3">
             <h3 class="text-uppercase">follow us</h3>
-            {{-- <figure v-for="(element) in socials">
-                <img :src="element.source" :alt="element.name">
-            </figure> --}}
+            @foreach ($socials as $element)
+                <figure>
+                    <img src="<?= $element["source"] ?>" alt="<?= $element["name"] ?>">
+                </figure>
+            @endforeach
         </div>
     </div>
 </div>
 
 @endsection
-
-<style lang="scss">
-    div.backContent{
-    background-color: #1c1c1c;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 40px;
-    }
-
-    div.backContent button{
-        width: 200px;
-        text-transform: uppercase;
-        border-radius: 0;
-        letter-spacing: 0.1rem;
-    }
-    div.backContent div{
-        position: relative;
-        
-    }
-    div.backContent div h3{
-            position: absolute;
-            top:-27px;
-            left: 40px;
-            color: white;
-            text-transform: uppercase;
-            padding: 10px 20px;
-            background-color: #0282f9;
-    
-    }
-
-    .singleCard{
-    width: calc(100%/6);
-    padding: 20px;
-    }
-    .singleCard span{ 
-        color: white;
-        font-size: 14px;
-        text-transform: uppercase;
-    }
-    .singleCard figure{
-        width: 100%;
-        height: 164px;
-        overflow: hidden;
-    }
-    .singleCard figure img{
-        width: 100%;
-        display: block;
-    
-    }
-
-    #ctaBack{
-        padding-block: 10px;
-        background-color: #0282f9;
-        color: white;
-        font-weight: 500;
-    }
-
-    #ctaBack figure img{
-        width: 45px;
-        
-    }
-
-    
-</style>
 
